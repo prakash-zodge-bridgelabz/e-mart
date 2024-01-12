@@ -1,6 +1,39 @@
 {
     "posts": [
-      { "id": "1", "title": "a title" },
-      { "id": "2", "title": "another title" }
+    { 
+        "description":"CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes",
+        "id":1,
+        "image":"https://m.media-amazon.com/images/I/51jnAebPo8L._SX679_.jpg",
+        "price":2000,
+        "title":"Cp security plus camera"
+    },
+    { 
+        "description":"CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes",
+        "id":2,
+        "image":"https://m.media-amazon.com/images/I/61jZzPVRZwL._SX679_PIbundle-25,TopRight,0,0_AA679SH20_.jpg",
+        "price":2000,
+        "title":"Green tea"
+    },
+    { 
+        "description":"CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes",
+        "id":3,
+        "image":"https://m.media-amazon.com/images/I/51jnAebPo8L._SX679_.jpg",
+        "price":2000,
+        "title":"Cp security plus camera"
+    },
+    { 
+        "description":"CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes",
+        "id":4,
+        "image":"https://m.media-amazon.com/images/I/61jZzPVRZwL._SX679_PIbundle-25,TopRight,0,0_AA679SH20_.jpg",
+        "price":2000,
+        "title":"Green tea"
+    },
+    { 
+        "description":"CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes",
+        "id":5,
+        "image":"https://m.media-amazon.com/images/I/61jZzPVRZwL._SX679_PIbundle-25,TopRight,0,0_AA679SH20_.jpg",
+        "price":2000,
+        "title":"Green tea"
+    }
     ]
   }

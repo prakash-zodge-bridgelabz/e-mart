@@ -1,1 +1,52 @@
-<p>cart works!</p>
+<ng-container>
+    <div class="containeer">
+        <div class="card-table">
+            <div class="card-product">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Green tea</td>
+                            <td><img style="width: 120px;"
+                                    src="https://m.media-amazon.com/images/I/61jZzPVRZwL._SX679_PIbundle-25,TopRight,0,0_AA679SH20_.jpg"
+                                    alt=""></td>
+                            <td>test</td>
+                            <td>test</td>
+                            <td>test</td>
+                            <td>test</td>
+                            <td><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button class="btn btn-danger">Empty cart</button></td>
+                            <td><button routerLink="/products" class="btn btn-success">Shop more</button></td>
+                            <td><button class="btn btn-warning">Checkout</button></td>
+                            <td><strong>Grand total: 0</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<!-- Empty cart -->
+<ng-container>
+    <div class="center">
+        <h4>Your cart is empty!</h4>
+        <h6>Add item to it</h6>
+        <button routerLink="/products" class="btn btn-dark">Show now</button>
+    </div>
+</ng-container>
