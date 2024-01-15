@@ -10,6 +10,7 @@ export class ProductsComponent implements OnInit{
   // Storing product list
   public productList:any;
   posts: any[] = [];
+searchText: any;
   constructor(private api:ProductsService, private cart:CartService){}
 
   ngOnInit(): void {
