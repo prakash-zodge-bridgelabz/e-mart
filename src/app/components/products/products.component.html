@@ -1,18 +1,11 @@
-<!-- <div class="search-hero">
-    <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search by product name">
-</div>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Id</th>
-        </tr>
-    </thead>
-</table> -->
 
-
+<div class="container">
     <div class="row">
-
-        <ng-container *ngFor="let item of productList">
+        <div class="search-hero form-group mySearchDiv">
+            <input type="text" class="form-control form-control-lg" name="search" 
+            [(ngModel)]="searchText" placeholder="Search">
+        </div>
+        <ng-container *ngFor="let item of productList | filter:searchText">
             <div class="card col-md-3">
                 
                 <img src="{{item.image}}" alt="">
