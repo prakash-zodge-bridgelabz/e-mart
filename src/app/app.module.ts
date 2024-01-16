@@ -12,6 +12,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { NgxSearchFilterModule } from 'ngx-search-filter';
+
 @NgModule({
   declarations: [
     AppComponent,

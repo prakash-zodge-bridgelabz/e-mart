@@ -7,7 +7,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'products',
+    redirectTo:'home',
     pathMatch:'full'
   },
   {

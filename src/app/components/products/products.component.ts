@@ -30,15 +30,29 @@ searchText: any;
     this.cart.addToCart(item);
     console.log(item);
   }
-  likeProduct(item: any): void {
-    item.likes++;
-    this.api.updateProduct(item).subscribe();
-  }
+  public likedProducts: Set<number> = new Set<number>(); // Set to store liked product ids
 
-  // Function to handle dislike button click
+  likeProduct(item: any): void {
+    // Check if the product has already been liked
+    if (!this.likedProducts.has(item.id)) {
+      let likesCount = item.likes;
+      likesCount++;
+      item.likes++;
+      this.api.updateProduct(item, likesCount, item.dislikes).subscribe();
+      // Add the product id to the likedProducts set
+      this.likedProducts.add(item.id);
+    }
+  }
+  public dislikedProducts: Set<number> = new Set<number>();
   dislikeProduct(item: any): void {
-    item.dislikes++;
-    this.api.updateProduct(item).subscribe();
+    if(!this.dislikedProducts.has(item.id)){
+      let dislikesCount=item.dislikes;
+      item.dislikes++;
+      dislikesCount++;
+      this.api.updateProduct(item,item.likes,dislikesCount).subscribe();
+      this.dislikedProducts.add(item.id);
+    }
+    
   }  
   
 }

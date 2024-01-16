@@ -12,12 +12,14 @@ export class ProductsService {
 
   // Get method
   getProduct(): Observable<any> {
-    return this.http.get('http://localhost:3000/posts');
+    return this.http.get('http://localhost:3000/products');
   }
 
   // Update method to update product in JSON server
-  updateProduct(product: any): Observable<any> {
-    const url = `http://localhost:3000/posts/${product.id}`;
-    return this.http.put(url, product);
+  updateProduct(product: any,productLikes:number,productDislikes:number): Observable<any> {
+    const url = `http://localhost:3000/products/${product.id}`;
+    let likesCount=productLikes;
+    let dislikesCount=productDislikes;
+    return this.http.patch<any>(url,{likes:likesCount,dislikes:dislikesCount});
   }
 }

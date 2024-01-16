@@ -1,10 +1,19 @@
 
+
 <div class="container">
-    <div class="row">
-        <div class="search-hero form-group mySearchDiv">
-            <input type="text" class="form-control form-control-lg" name="search" 
+    <div class="row  mySearchDiv">
+        <div class="col">
+            <input type="text" class="form-control form-control-lg col" name="search" 
             [(ngModel)]="searchText" placeholder="Search">
         </div>
+        <div class="col">
+            Filter options
+        </div>
+        <div class="col">
+            filter options
+      </div>
+    
+    <div class="row">
         <ng-container *ngFor="let item of productList | filter:searchText">
             <div class="card col-md-3">
                 
@@ -13,11 +22,11 @@
                 </h5>
                 <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
                 <p><strong>Amount:</strong>{{item.price}}</p>
-                <button (click)="likeProduct(item)" class="btn btm-light">
+                <button (click)="likeProduct(item)" [disabled]="likedProducts.has(item.id)" class="btn btm-light">
                     <i style="font-size: 30px;" class="fa fa-thumbs-up" aria-hidden="true"></i>
                     <span class="badge bg-secondary">{{item.likes}}</span>
                 </button>
-                <button  (click)="dislikeProduct(item)" class="btn btm-light">
+                <button  (click)="dislikeProduct(item)" [disabled]="dislikedProducts.has(item.id)" class="btn btm-light">
                     <i style="font-size: 30px;" class="fa fa-thumbs-down" aria-hidden="true"></i>
                     <span class="badge bg-secondary">{{item.dislikes}}</span>
                 </button> 
