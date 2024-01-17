@@ -54,5 +54,36 @@ searchText: any;
     }
     
   }  
-  
+  //sort
+  sortIcon: string = 'bi-sort-numeric-down'; // Default sort icon
+  sortField: string = 'price'; // Default sort field
+
+  toggleSortOrder(field: string) {
+    if (this.sortField === field) {
+      this.sortIcon = this.sortIcon === 'bi-sort-numeric-down' ? 'bi-sort-numeric-up' : 'bi-sort-numeric-down';
+    } else {
+      this.sortIcon = 'bi-sort-numeric-down';
+    }
+
+    this.sortField = field;
+    this.sortProducts();
+  }
+
+  sortProducts() {
+    this.productList.sort((a:any, b:any) => {
+      const valueA = this.sortField === 'price' ? a.price : a.likes;
+      const valueB = this.sortField === 'price' ? b.price : b.likes;
+
+      return this.sortIcon === 'bi-sort-numeric-down' ? valueA - valueB : valueB - valueA;
+    });
+  }
+  resetFilters() {
+    this.api.getProduct().subscribe(res=>{
+      //console.log(res);
+      this.productList=res;
+    });
+    this.searchText = '';
+    this.sortIcon = 'bi-sort-numeric-down';
+    this.sortProducts();
+  }
 }
