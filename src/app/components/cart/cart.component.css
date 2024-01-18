@@ -1,7 +1,8 @@
 .card{
     height: 60vh;
     margin:25px;
-    padding:25px;
+    padding:25px;       
+    
 }
 .center{
     position: absolute;
@@ -12,4 +13,8 @@
 }
 h4,h6{
     font-weight: 400;
+}
+.containeer{
+    display: flex;
+    flex-direction: column;
 }

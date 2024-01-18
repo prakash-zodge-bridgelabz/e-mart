@@ -48,15 +48,17 @@
                     <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
                         {{item.description}}</p>
                     <p><strong>Amount:</strong>{{item.price}}</p>
-                    <button (click)="likeProduct(item)" [disabled]="likedProducts.has(item.id)" class="btn btm-light">
-                        <i style="font-size: 30px;" class="fa fa-thumbs-up" aria-hidden="true"></i>
-                        <span class="badge bg-secondary">{{item.likes}}</span>
-                    </button>
-                    <button (click)="dislikeProduct(item)" [disabled]="dislikedProducts.has(item.id)"
-                        class="btn btm-light">
-                        <i style="font-size: 30px;" class="fa fa-thumbs-down" aria-hidden="true"></i>
-                        <span class="badge bg-secondary">{{item.dislikes}}</span>
-                    </button>
+                    <div class="btn-group" style="margin-top: 10px;padding:10px">
+                        <button (click)="likeProduct(item)" [disabled]="likedProducts.has(item.id)" class="btn btn-light">
+                            <i style="font-size: 30px;" class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            <span class="badge bg-secondary">{{item.likes}}</span>
+                        </button>
+                        <button (click)="dislikeProduct(item)" [disabled]="dislikedProducts.has(item.id)" class="btn btn-light">
+                            <i style="font-size: 30px;" class="fa fa-thumbs-down" aria-hidden="true"></i>
+                            <span class="badge bg-secondary">{{item.dislikes}}</span>
+                        </button>
+                    </div>
+                    
                     <button class="btn btn-dark" (click)="addToCart(item)">Add to cart</button>
                 </div>
             </ng-container>
