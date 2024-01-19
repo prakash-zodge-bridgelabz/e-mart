@@ -31,8 +31,9 @@
       "image": "https://m.media-amazon.com/images/I/81UwR7LlQ3L._AC_UL480_FMwebp_QL65_.jpg",
       "price": "1732",
       "likes": 10,
-      "dislikes": 4,
-      "description": "Cutting EDGE Modular Containers Oval Set with Plain Lid for Rice, Dal,Atta, Flour, Cereals, Pulses, Snacks, Stackable, 2.4 Litre Set of 8 - Blue LidsCutting EDGE Modular Containers Oval Set with Plain Lid for Rice, Dal,Atta, Flour, Cereals, Pulses, Snacks"
+      "dislikes": 5,
+      "description": "Cutting EDGE Modular Containers Oval Set with Plain Lid for Rice, Dal,Atta, Flour, Cereals, Pulses, Snacks, Stackable, 2.4 Litre Set of 8 - Blue Lids",
+      "category": "Kitchen"
     },
     {
       "id": "2",
@@ -41,7 +42,8 @@
       "price": 720,
       "likes": 3,
       "dislikes": 2,
-      "description": "Tulsi Green Tea Lemon Ginger 50 Tea Bags - Stress Relieving & Refreshing This exciting blend of The Queen of Herbs Tulsi, our exquisite Green Tea, zesty and tasty Ginger, accented with Lemon Flavour creates a totally delicious and satisfying tea experience."
+      "description": "Tulsi Green Tea Lemon Ginger 50 Tea Bags - Stress Relieving & Refreshing This exciting blend of The Queen of Herbs Tulsi, our exquisite Green Tea, zesty and tasty Ginger, accented with Lemon Flavour creates a totally delicious and satisfying tea experience.",
+      "category": "Beverages"
     },
     {
       "id": "3",
@@ -50,7 +52,8 @@
       "price": 697,
       "likes": 1,
       "dislikes": 1,
-      "description": "It provides relief from skin irritation, prickly heat, redness, itching, fungal infection."
+      "description": "It provides relief from skin irritation, prickly heat, redness, itching, fungal infection.",
+      "category": "Personal Care"
     },
     {
       "id": "4",
@@ -59,7 +62,8 @@
       "price": 541,
       "likes": 0,
       "dislikes": 0,
-      "description": "Dettol original soap with classic Dettol fragrance provides Dettol's trusted germ protection from a wide range of unseen germs."
+      "description": "Dettol original soap with classic Dettol fragrance provides Dettol's trusted germ protection from a wide range of unseen germs.",
+      "category": "Personal Care"
     },
     {
       "id": "5",
@@ -68,7 +72,8 @@
       "price": 4100,
       "likes": 4,
       "dislikes": 2,
-      "description": "Switch on to a fresh and fine look with beautifully designed unisex pure wool caps"
+      "description": "Switch on to a fresh and fine look with beautifully designed unisex pure wool caps",
+      "category": "Fashion"
     },
     {
       "id": "6",
@@ -77,7 +82,8 @@
       "price": 900,
       "likes": 2,
       "dislikes": 1,
-      "description": "It's unique membrane technology keeps your ride smelling fresh for up to 30 days."
+      "description": "It's unique membrane technology keeps your ride smelling fresh for up to 30 days.",
+      "category": "Automotive"
     },
     {
       "id": "7",
@@ -86,7 +92,8 @@
       "price": 1999,
       "likes": 0,
       "dislikes": 0,
-      "description": "Get great deals from top brands for Car & Bike Accessories, Care Products"
+      "description": "Get great deals from top brands for Car & Bike Accessories, Care Products",
+      "category": "Automotive"
     },
     {
       "id": "8",
@@ -95,7 +102,8 @@
       "price": 967,
       "likes": 0,
       "dislikes": 0,
-      "description": "Shop for Health & Personal Care Products"
+      "description": "Shop for Health & Personal Care Products",
+      "category": "Home Care"
     },
     {
       "id": "9",
@@ -104,7 +112,8 @@
       "price": 954,
       "likes": 0,
       "dislikes": 0,
-      "description": "USB C has dual role and is reversible"
+      "description": "USB C has dual role and is reversible",
+      "category": "Electronics"
     },
     {
       "id": "10",
@@ -113,7 +122,8 @@
       "price": 398,
       "likes": 0,
       "dislikes": 0,
-      "description": "Our shoe wipes sneaker cleaner come in a 1 pack of 80 wipe resealable packs to lock in the moisture and keep them fresh"
+      "description": "Our shoe wipes sneaker cleaner come in a 1 pack of 80 wipe resealable packs to lock in the moisture and keep them fresh",
+      "category": "Fashion"
     },
     {
       "id": "11",
@@ -122,7 +132,8 @@
       "price": 873,
       "likes": 0,
       "dislikes": 0,
-      "description": "Wide range of microscope slides available from Merck. Disposable microscope slide-grids for use with dry or suspended specimens."
+      "description": "Wide range of microscope slides available from Merck. Disposable microscope slide-grids for use with dry or suspended specimens.",
+      "category": "Fashion"
     },
     {
       "id": "12",
@@ -131,7 +142,8 @@
       "price": 5100,
       "likes": 0,
       "dislikes": 0,
-      "description": "Step into the world of running with a bang in our Incinerate Running Shoes, a silhouette perfect for giving the entry level runner boost with every stride"
+      "description": "Step into the world of running with a bang in our Incinerate Running Shoes, a silhouette perfect for giving the entry level runner boost with every stride",
+      "category": "Footwear"
     },
     {
       "id": "13",
@@ -140,7 +152,8 @@
       "price": 799,
       "likes": 0,
       "dislikes": 0,
-      "description": "Presto! Oxo-Biodegradable Garbage Bags offer a convenient method of garbage disposal"
+      "description": "Presto! Oxo-Biodegradable Garbage Bags offer a convenient method of garbage disposal",
+      "category": "Home Care"
     },
     {
       "id": "14",
@@ -149,7 +162,8 @@
       "price": 1000,
       "likes": 0,
       "dislikes": 0,
-      "description": "These shoe bags pouches travel are odorless, stain resistant, breathable, dust proof, lightweight and easy to use"
+      "description": "These shoe bags pouches travel are odorless, stain resistant, breathable, dust proof, lightweight and easy to use",
+      "category": "Fashion"
     },
     {
       "id": "15",
@@ -158,7 +172,8 @@
       "price": 943,
       "likes": 0,
       "dislikes": 0,
-      "description": "Bodycare brings collection of girls slip with 100% Cotton,premium quality breathable fabric."
+      "description": "Bodycare brings collection of girls slip with 100% Cotton,premium quality breathable fabric.",
+      "category": "Baby Care"
     },
     {
       "id": "16",
@@ -167,7 +182,8 @@
       "price": 200,
       "likes": 1,
       "dislikes": 0,
-      "description": "The Real Basics Unisex Child Fleece Track Suit emerges as a beacon of comfort and trendiness in the vast sea of baby winter clothing"
+      "description": "The Real Basics Unisex Child Fleece Track Suit emerges as a beacon of comfort and trendiness in the vast sea of baby winter clothing",
+      "category": "Baby Clothing"
     },
     {
       "id": "17",
@@ -176,7 +192,8 @@
       "price": 764,
       "likes": 0,
       "dislikes": 0,
-      "description": "Product description Look effortlessly stylish by wearing this pair of flat sandal featuring an eye-catching design and a refined appeal"
+      "description": "Product description Look effortlessly stylish by wearing this pair of flat sandal featuring an eye-catching design and a refined appeal",
+      "category": "Footwear"
     },
     {
       "id": "18",
@@ -185,7 +202,8 @@
       "price": 976,
       "likes": 0,
       "dislikes": 0,
-      "description": "Shoetopia Women and Girls Blue Block Heel Sandal"
+      "description": "Shoetopia Women and Girls Blue Block Heel Sandal",
+      "category": "Footwear"
     },
     {
       "id": "19",
@@ -194,7 +212,8 @@
       "price": 432,
       "likes": 0,
       "dislikes": 0,
-      "description": "Easy to wash,clean and drys"
+      "description": "Easy to wash,clean and drys",
+      "category": "Footwear"
     },
     {
       "id": "20",
@@ -203,7 +222,8 @@
       "price": 275,
       "likes": 1,
       "dislikes": 0,
-      "description": "CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes"
+      "description": "CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes",
+      "category": "Electronics"
     }
   ]
 }

@@ -1,5 +1,23 @@
 <div class="container">
     <div class="row  mySearchDiv">
+        <label for="category">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Shop by Category:
+            <div class="custom-dropdown">
+                <select [(ngModel)]="selectedCategory" (change)="filterProductsByCategory()" id="category">
+                    <option value="">All Categories</option>
+                    <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+                </select>
+                <span class="arrow">&#9660;</span>
+            </div>
+        </label>
         <div class="col">
             <input type="text" class="form-control form-control-lg col" name="search" [(ngModel)]="searchText"
                 placeholder="Search">
@@ -21,24 +39,28 @@
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="button" class="btn btn-primary" (click)="toggleSortOrder('likes')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
-                    <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a10 10 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733q.086.18.138.363c.077.27.113.567.113.856s-.036.586-.113.856c-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.2 3.2 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.8 4.8 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a10 10 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733q.086.18.138.363c.077.27.113.567.113.856s-.036.586-.113.856c-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.2 3.2 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.8 4.8 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z" />
+                </svg>
                 Sort by Likes
-              </button>
+            </button>
 
         </div>
         <div class="col">
             <button type="button" (click)="resetFilters()" class="btn btn-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
-                    <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8z"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-backspace-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8z" />
+                </svg>
                 Clear filters
             </button>
         </div>
 
         <div class="row">
-            <ng-container *ngFor="let item of productList | filter:searchText">
+            <ng-container *ngFor="let item of filteredProducts | filter:searchText">
                 <div class="card col-md-3">
 
                     <img src="{{item.image}}" alt="">
@@ -49,17 +71,19 @@
                         {{item.description}}</p>
                     <p><strong>Amount:</strong>{{item.price}}</p>
                     <div class="btn-group" style="margin-top: 10px;padding:10px">
-                        <button (click)="likeProduct(item)" [disabled]="likedProducts.has(item.id)" class="btn btn-light">
-                            <i style="font-size: 30px;" class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <button (click)="likeProduct(item)" [disabled]="likedProducts.has(item.id)"
+                            class="btn btn-light">
+                            <i style="font-size: 30px; color: blue;" class="fas fa-thumbs-up" aria-hidden="true"></i>
                             <span class="badge bg-secondary">{{item.likes}}</span>
                         </button>
-                        <button (click)="dislikeProduct(item)" [disabled]="dislikedProducts.has(item.id)" class="btn btn-light">
-                            <i style="font-size: 30px;" class="fa fa-thumbs-down" aria-hidden="true"></i>
+                        <button (click)="dislikeProduct(item)" [disabled]="dislikedProducts.has(item.id)"
+                            class="btn btn-light">
+                            <i style="font-size: 30px; color: red;" class="fa fa-thumbs-down" aria-hidden="true"></i>
                             <span class="badge bg-secondary">{{item.dislikes}}</span>
                         </button>
                     </div>
-                    
-                    <button class="btn btn-dark" (click)="addToCart(item)">Add to cart</button>
+
+                    <button class="btn btn-success" (click)="addToCart(item)">Add to cart</button>
                 </div>
             </ng-container>
 

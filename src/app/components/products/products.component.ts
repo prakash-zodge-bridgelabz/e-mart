@@ -6,27 +6,48 @@ import { CartService } from '../../api/cart.service';
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
-export class ProductsComponent implements OnInit{
+export class ProductsComponent implements OnInit {
   // Storing product list
-  public productList:any;
+  public productList: any;
+  
+  public categories: string[] = [];
+  public selectedCategory: string = '';
+  public filteredProducts: any[] = [];
   posts: any[] = [];
-searchText: any;
-  constructor(private api:ProductsService, private cart:CartService){}
+  searchText: any;
+  constructor(private api: ProductsService, private cart: CartService) { }
 
   ngOnInit(): void {
-    
-    this.api.getProduct().subscribe(res=>{
-      //console.log(res);
-      this.productList=res;
 
-      this.productList.forEach((a:any) => {
-        Object.assign(a,{quantity:1,total:a.price})
+    this.api.getProduct().subscribe(res => {
+      //console.log(res);
+      this.productList = res;
+      this.categories = Array.from(new Set(this.productList.map((item: any) => item.category)));
+      this.filteredProducts = [...this.productList]; // initially, show all products
+      
+      this.productList.forEach((a: any) => {
+        Object.assign(a, { quantity: 1, total: a.price });
       });
     });
-    
+
   }
+  filterProductsByCategory() {
+    this.filteredProducts = this.selectedCategory ?
+      this.productList.filter((item: any) => item.category === this.selectedCategory) :
+      [...this.productList]; // show all products if no category selected
+  }
+  isDropdownOpen: boolean = false;
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+    this.isDropdownOpen = false;
+    this.filterProductsByCategory();
+  }
+  
   //add to cart
-  addToCart(item:any){
+  addToCart(item: any) {
     this.cart.addToCart(item);
     console.log(item);
   }
@@ -45,15 +66,15 @@ searchText: any;
   }
   public dislikedProducts: Set<number> = new Set<number>();
   dislikeProduct(item: any): void {
-    if(!this.dislikedProducts.has(item.id)){
-      let dislikesCount=item.dislikes;
+    if (!this.dislikedProducts.has(item.id)) {
+      let dislikesCount = item.dislikes;
       item.dislikes++;
       dislikesCount++;
-      this.api.updateProduct(item,item.likes,dislikesCount).subscribe();
+      this.api.updateProduct(item, item.likes, dislikesCount).subscribe();
       this.dislikedProducts.add(item.id);
     }
-    
-  }  
+
+  }
   //sort
   sortIcon: string = 'bi-sort-numeric-down'; // Default sort icon
   sortField: string = 'price'; // Default sort field
@@ -70,7 +91,7 @@ searchText: any;
   }
 
   sortProducts() {
-    this.productList.sort((a:any, b:any) => {
+    this.productList.sort((a: any, b: any) => {
       const valueA = this.sortField === 'price' ? a.price : a.likes;
       const valueB = this.sortField === 'price' ? b.price : b.likes;
 
@@ -78,9 +99,9 @@ searchText: any;
     });
   }
   resetFilters() {
-    this.api.getProduct().subscribe(res=>{
+    this.api.getProduct().subscribe(res => {
       //console.log(res);
-      this.productList=res;
+      this.productList = res;
     });
     this.searchText = '';
     this.sortIcon = 'bi-sort-numeric-down';
