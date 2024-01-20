@@ -40,7 +40,7 @@
       "title": "Green tea",
       "image": "https://m.media-amazon.com/images/I/61jZzPVRZwL._SX679_PIbundle-25,TopRight,0,0_AA679SH20_.jpg",
       "price": 720,
-      "likes": 3,
+      "likes": 4,
       "dislikes": 2,
       "description": "Tulsi Green Tea Lemon Ginger 50 Tea Bags - Stress Relieving & Refreshing This exciting blend of The Queen of Herbs Tulsi, our exquisite Green Tea, zesty and tasty Ginger, accented with Lemon Flavour creates a totally delicious and satisfying tea experience.",
       "category": "Beverages"
@@ -190,7 +190,7 @@
       "title": "Bubblegummers Girls",
       "image": "https://m.media-amazon.com/images/I/61ZuUS0GnQL._SX575_.jpg",
       "price": 764,
-      "likes": 0,
+      "likes": 2,
       "dislikes": 0,
       "description": "Product description Look effortlessly stylish by wearing this pair of flat sandal featuring an eye-catching design and a refined appeal",
       "category": "Footwear"
@@ -210,8 +210,8 @@
       "title": "Yellow Bee Rubber Unicorn Sandals",
       "image": "https://m.media-amazon.com/images/I/51WGG7FICrL._SY535_.jpg",
       "price": 432,
-      "likes": 0,
-      "dislikes": 0,
+      "likes": 1,
+      "dislikes": 1,
       "description": "Easy to wash,clean and drys",
       "category": "Footwear"
     },
@@ -224,6 +224,68 @@
       "dislikes": 0,
       "description": "CCTV (closed-circuit television) is a TV system in which signals are not publicly distributed but are monitored, primarily for surveillance and security purposes",
       "category": "Electronics"
+    }
+  ],
+  "team": [
+    {
+      "id": "1",
+      "name": "Prakash Zodge",
+      "image": "./assets/PassportImages/Prakash.jpg",
+      "role": "CEO",
+      "background": "B.Tech in Computer Science and Engineering",
+      "description": "Prakash is the visionary leader and CEO of our organization. With a background in Computer Science, he brings a wealth of knowledge and experience to drive the company's success. Prakash leads our team with passion and dedication, ensuring our projects reach new heights of innovation and excellence.",
+      "linkedin": "https://www.linkedin.com/in/prakash0000/",
+      "github": "https://github.com/prakash999zodge"
+    },
+    {
+      "id": "2",
+      "name": "Rutuja Jitendra Kamthe",
+      "image": "./assets/PassportImages/RutujaKamthe.jpeg",
+      "role": "Full-Stack",
+      "background": "Engineering of electronic and telecommunication system",
+      "description": "Rutuja is a talented software engineer contributing to our projects with creativity and precision. Her commitment to delivering high-quality code enhances the overall success of our development efforts.",
+      "linkedin": "https://www.linkedin.com/in/rutuja-kamthe-3a3557166/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "github": "https://github.com/rutujakamthe123"
+    },
+    {
+      "id": "3",
+      "name": "Rakesh N",
+      "image": "./assets/PassportImages/Rakesh N.jpeg",
+      "role": "Frontend",
+      "background": "Master of computer applications",
+      "description": "Rakesh, with his expertise in frontend, plays a key role in our team, ensuring that our projects meet and exceed industry standards.",
+      "linkedin": "https://www.linkedin.com/in/rakesh-n-07a270219/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "github": "https://github.com/rakeshn123"
+    },
+    {
+      "id": "4",
+      "name": "Ranga Mohana Swetha",
+      "image": "./assets/PassportImages/Swetha.png",
+      "role": "Backend",
+      "background": "B.Tech (CSE)",
+      "description": "Swetha is a dedicated team member specializing in backend. Her attention to detail and problem-solving skills contribute significantly to our project success.",
+      "linkedin": "https://www.linkedin.com/in/mohana-swetha-ranga-976b09225",
+      "github": "https://github.com/mohanaswetha1803"
+    },
+    {
+      "id": "5",
+      "name": "Rajesh",
+      "image": "https://m.media-amazon.com/images/I/81UwR7LlQ3L._AC_UL480_FMwebp_QL65_.jpg",
+      "role": "Tester",
+      "background": "BE [CSE]",
+      "description": "Rajesh brings valuable expertise in testing to our team. His collaborative approach and innovative mindset contribute to the success of our projects.",
+      "linkedin": "https://www.linkedin.com/in/rajesh-tester",
+      "github": "https://github.com/rajeshtester"
+    },
+    {
+      "id": "6",
+      "name": "Krishna",
+      "image": "https://m.media-amazon.com/images/I/81UwR7LlQ3L._AC_UL480_FMwebp_QL65_.jpg",
+      "role": "Performance Assurance",
+      "background": "BE [IT]",
+      "description": "Krishna, with a background in Information Technology, plays a crucial role in our team. His skills and dedication contribute to the overall success of our projects.",
+      "linkedin": "https://www.linkedin.com/in/krishna-performance",
+      "github": "https://github.com/krishnaperformance"
     }
   ]
 }

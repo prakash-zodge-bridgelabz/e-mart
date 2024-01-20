@@ -1,0 +1,54 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 30%;
+  margin: 10px; 
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+#page-head{
+  margin-bottom: 20px;
+    margin-top: 20px;
+  text-align: center;
+  background-color: rgb(205, 248, 229);
+  color: #000000;
+}
+#about-m {
+  background: linear-gradient(to right, #3498db, #2ecc71); /* Background color gradient */
+  color: white; /* Text color */
+  padding: 50px; /* Adjust padding as needed */
+}
+
+#about-m div {
+  text-align: center; /* Center-align text */
+  font-family: 'Arial', sans-serif; /* Specify your preferred font-family */
+}
+
+#about-m h2 {
+  font-size: 2em; /* Adjust font size as needed */
+}
+
+#about-m p {
+  font-size: 1.2em; /* Adjust font size as needed */
+  line-height: 1.6; /* Adjust line height as needed */
+}
+
+#about-m abbr {
+  font-style: italic; /* Italicize the text */
+}
+
+#about-m marquee {
+  background-color: rgba(255, 255, 255, 0.7); /* Background color with alpha transparency */
+  padding: 10px; /* Adjust padding as needed */
+  display: inline-block; /* Make the marquee display as an inline-block element */
+  width: 100%; /* Full width */
+  color: #000000;
+}

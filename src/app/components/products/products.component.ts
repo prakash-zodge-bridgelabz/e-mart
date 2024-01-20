@@ -9,7 +9,6 @@ import { CartService } from '../../api/cart.service';
 export class ProductsComponent implements OnInit {
   // Storing product list
   public productList: any;
-  
   public categories: string[] = [];
   public selectedCategory: string = '';
   public filteredProducts: any[] = [];
@@ -18,7 +17,6 @@ export class ProductsComponent implements OnInit {
   constructor(private api: ProductsService, private cart: CartService) { }
 
   ngOnInit(): void {
-
     this.api.getProduct().subscribe(res => {
       //console.log(res);
       this.productList = res;
@@ -91,7 +89,7 @@ export class ProductsComponent implements OnInit {
   }
 
   sortProducts() {
-    this.productList.sort((a: any, b: any) => {
+    this.filteredProducts.sort((a: any, b: any) => {
       const valueA = this.sortField === 'price' ? a.price : a.likes;
       const valueB = this.sortField === 'price' ? b.price : b.likes;
 
@@ -101,8 +99,9 @@ export class ProductsComponent implements OnInit {
   resetFilters() {
     this.api.getProduct().subscribe(res => {
       //console.log(res);
-      this.productList = res;
+      this.filteredProducts = res;
     });
+    this.selectedCategory='';
     this.searchText = '';
     this.sortIcon = 'bi-sort-numeric-down';
     this.sortProducts();
