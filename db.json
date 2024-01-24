@@ -29,8 +29,8 @@
       "id": "1",
       "title": "Solimo Modular Plastic Storage Containers",
       "image": "https://m.media-amazon.com/images/I/81UwR7LlQ3L._AC_UL480_FMwebp_QL65_.jpg",
-      "price": "1732",
-      "likes": 10,
+      "price": 1732,
+      "likes": 11,
       "dislikes": 5,
       "description": "Cutting EDGE Modular Containers Oval Set with Plain Lid for Rice, Dal,Atta, Flour, Cereals, Pulses, Snacks, Stackable, 2.4 Litre Set of 8 - Blue Lids",
       "category": "Kitchen"
@@ -70,7 +70,7 @@
       "title": "Woolen Beanie Cap",
       "image": "https://m.media-amazon.com/images/I/71ETCqzBUVL._SX679_.jpg",
       "price": 4100,
-      "likes": 4,
+      "likes": 6,
       "dislikes": 2,
       "description": "Switch on to a fresh and fine look with beautifully designed unisex pure wool caps",
       "category": "Fashion"
@@ -140,7 +140,7 @@
       "title": "Puma Unisex-Adult Incinerate Running Shoe",
       "image": "https://m.media-amazon.com/images/I/61c9knNfrpL._SY625_.jpg",
       "price": 5100,
-      "likes": 0,
+      "likes": 1,
       "dislikes": 0,
       "description": "Step into the world of running with a bang in our Incinerate Running Shoes, a silhouette perfect for giving the entry level runner boost with every stride",
       "category": "Footwear"
@@ -235,7 +235,7 @@
       "background": "B.Tech in Computer Science and Engineering",
       "description": "Prakash is the visionary leader and CEO of our organization. With a background in Computer Science, he brings a wealth of knowledge and experience to drive the company's success. Prakash leads our team with passion and dedication, ensuring our projects reach new heights of innovation and excellence.",
       "linkedin": "https://www.linkedin.com/in/prakash0000/",
-      "github": "https://github.com/prakash999zodge"
+      "github": "https://github.com/prakash.zodge.bridgelabz"
     },
     {
       "id": "2",
@@ -269,23 +269,13 @@
     },
     {
       "id": "5",
-      "name": "Rajesh",
-      "image": "https://m.media-amazon.com/images/I/81UwR7LlQ3L._AC_UL480_FMwebp_QL65_.jpg",
+      "name": "Satya Sri Pulipati",
+      "image": "./assets/PassportImages/Satya.jpg",
       "role": "Tester",
       "background": "BE [CSE]",
-      "description": "Rajesh brings valuable expertise in testing to our team. His collaborative approach and innovative mindset contribute to the success of our projects.",
-      "linkedin": "https://www.linkedin.com/in/rajesh-tester",
-      "github": "https://github.com/rajeshtester"
-    },
-    {
-      "id": "6",
-      "name": "Krishna",
-      "image": "https://m.media-amazon.com/images/I/81UwR7LlQ3L._AC_UL480_FMwebp_QL65_.jpg",
-      "role": "Performance Assurance",
-      "background": "BE [IT]",
-      "description": "Krishna, with a background in Information Technology, plays a crucial role in our team. His skills and dedication contribute to the overall success of our projects.",
-      "linkedin": "https://www.linkedin.com/in/krishna-performance",
-      "github": "https://github.com/krishnaperformance"
+      "description": "Satya brings valuable expertise in testing to our team. Her collaborative approach and innovative mindset contribute to the success of our projects.",
+      "linkedin": "https://www.linkedin.com/in/satya-sri-pulipati-6b2000215/",
+      "github": "https://github.com/satyasrip"
     }
   ]
 }

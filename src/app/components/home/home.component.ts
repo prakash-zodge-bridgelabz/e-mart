@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,4 +13,10 @@ export class HomeComponent {
     
   //   // Add more wallpaper URLs as needed
   // ];
+constructor(private router:Router){}
+  navigateToProducts(category: string) {
+    // Use Angular Router to navigate to the products page with the selected category
+    this.router.navigate(['/products'], { queryParams: { category: category } });
+  }
+  
 }

@@ -13,6 +13,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { NgxSearchFilterModule } from 'ngx-search-filter';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { LoginComponent } from './components/login/login.component';
+import { DbService } from './api/db.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     ProductsComponent,
     CartComponent,
     HomeComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    LoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -28,10 +34,12 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     HttpClientModule,
     FormsModule,
     NgxSearchFilterModule,
-    CarouselModule
+    CarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    DbService
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
