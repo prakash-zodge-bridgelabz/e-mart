@@ -32,15 +32,17 @@ export class LoginComponent {
     this.hideButtons();
     let resp = this.service.getUsers();
     resp.subscribe((data) => this.users = data);
-  }
-  public findByUsername() {
-    let resp = this.service.getUsername("prakash");
-    resp.subscribe((data) => this.users = data);
-    console.log("Response :", resp);
+    console.log('this.users ==>',this.users);
+    console.log('this.users.data ==>',this.users.data);
   }
 
+  // public findByUsername() {
+  //   let resp = this.service.getUsername("prakash");
+  //   resp.subscribe((data) => this.users = data);
+  //   console.log("Response :", resp);
+  // }
   public login() {
-    const userExists = this.users.some((user: { username: any; password: any; }) => user.username === this.username && user.password === this.password);
+    const userExists = this.users.data.some((user: { username: any; password: any; }) => user.username === this.username && user.password === this.password);
     if (userExists) {
       console.log('Login successful');
       this.showButtons();

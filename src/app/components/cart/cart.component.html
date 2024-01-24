@@ -19,14 +19,13 @@
                         <tr>
                             <td>{{i+1}}</td>
                             <td>{{item.title}}</td>
-                            <td><img style="width: 120px;"
-                                    src="{{item.image}}"
-                                    alt=""></td>
+                            <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
                             <td>{{item.description}}</td>
                             <td>{{item.price}}</td>
                             <td>{{item.quantity}}</td>
                             <td>{{item.total}}</td>
-                            <td><button (click)="removeItemFromCart(item)" class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
+                            <td><button (click)="removeItemFromCart(item)" class="btn btn-danger"><i
+                                        class="fas fa-trash"></i></button></td>
                         </tr>
                     </tbody>
                     <tr>
@@ -50,3 +49,10 @@
         <button routerLink="/products" class="btn btn-dark">Shop now</button>
     </div>
 </ng-container>
+
+<footer class="bg-body-tertiary text-center text-lg-start">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright:
+        <a class="text-body" href="#">E-Mart.com</a>
+    </div>
+</footer>

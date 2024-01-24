@@ -1,15 +1,8 @@
 <section id="about-m" class="section-m">
     <div class="container">
         <div class="row  mySearchDiv">
-            <label for="category" style="margin-bottom: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="category" style="margin-bottom: 30px;">
                 Shop by Category:
                 <div class="custom-dropdown">
                     <select [(ngModel)]="selectedCategory"  (change)="filterProductsByCategory()" id="category">
@@ -19,12 +12,13 @@
                     <span class="arrow">&#9660;</span>
                 </div>
             </label>
+
             <div class="col">
                 <input type="text" class="form-control form-control-lg col" name="search" [(ngModel)]="searchText"
                     placeholder="Search">
             </div>
+
             <div class="col">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="button" class="btn btn-primary" (click)="toggleSortOrder('price')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" [class]="sortIcon">
                         <!-- Use dynamic class binding for the icon based on the sortIcon value -->
@@ -38,7 +32,6 @@
                     </svg>
                     Sort by Price
                 </button>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="button" class="btn btn-primary" (click)="toggleSortOrder('likes')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
@@ -47,8 +40,8 @@
                     </svg>
                     Sort by Likes
                 </button>
-    
             </div>
+
             <div class="col">
                 <button type="button" (click)="resetFilters()" class="btn btn-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -92,3 +85,10 @@
         </div>
     </div>  
 </section>
+<footer class="bg-body-tertiary text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright:
+        <a class="text-body" href="#">E-Mart.com</a>
+    </div>
+  </footer>

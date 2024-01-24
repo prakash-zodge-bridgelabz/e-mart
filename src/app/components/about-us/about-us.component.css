@@ -33,7 +33,7 @@
 }
 
 .section-m div {
-  max-width: 600px;
+  max-width: 1500px;
   text-align: center; /* Center text on all screens */
 }
 
@@ -48,4 +48,22 @@
     margin-left: 20px;
     text-align: left; /* Align text to the left on larger screens */
   }
+}
+footer {
+    background-color: #f8f9fa;
+    color: #495057;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.text-body {
+    color: #007bff;
+}
+
+@media (max-width: 767px) {
+    footer {
+        position: static;
+    }
 }

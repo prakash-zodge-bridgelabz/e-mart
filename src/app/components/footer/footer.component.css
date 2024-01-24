@@ -7,15 +7,14 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-  }
-  
-  .text-body {
+}
+
+.text-body {
     color: #007bff;
-  }
-  
-  @media (max-width: 767px) {
+}
+
+@media (max-width: 767px) {
     footer {
-      position: static;
+        position: static;
     }
-  }
-  
+}
