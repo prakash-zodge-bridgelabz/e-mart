@@ -8,9 +8,9 @@ import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 export class DbService {
   
   constructor(private http:HttpClient) { }
- private baseUrl='http://localhost:3000';
+ private baseUrl='http://localhost:3001';
   public findUsername(username:string){
-    return this.http.get(`http://localhost:3000/login_credentials/findUsername/'${username}'`);
+    return this.http.get(`http://localhost:3001/login_credentials/findUsername/'${username}'`);
   }
   public validateUsernamePassword(username: string, password: string): Observable<any> {
     const url = `${this.baseUrl}/login_credentials/validateUsernamePassword`;
@@ -25,7 +25,7 @@ export class DbService {
   //   return this.http.get("http://localhost:9090/findUser/"+username);
   // }
   public getUsers(){
-    return this.http.get("http://localhost:3000/login_credentials");
+    return this.http.get("http://localhost:3001/login_credentials");
   }
   
 }

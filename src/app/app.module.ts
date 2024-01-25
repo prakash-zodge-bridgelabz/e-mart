@@ -17,6 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DbService } from './api/db.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
+import { AuthGuardService } from './api/auth-guard.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   providers: [
     provideClientHydration(),
-    DbService
+    DbService,
+    AuthGuardService
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

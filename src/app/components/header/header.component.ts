@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../api/cart.service';
 import { LoginHeadersService } from '../../api/login-headers.service';
-
+import { AuthService } from '../../api/auth.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,7 +9,7 @@ import { LoginHeadersService } from '../../api/login-headers.service';
 })
 export class HeaderComponent implements OnInit{
   public totalItem = 0;
-  constructor(private cart:CartService,private loginHeaders:LoginHeadersService){}
+  constructor(private cart:CartService,private loginHeaders:LoginHeadersService,private authService: AuthService){}
   // Use a method to retrieve the hidden state
   areButtonsHidden() {
     return this.loginHeaders.getButtonsHiddenState();
@@ -18,5 +18,8 @@ export class HeaderComponent implements OnInit{
     this.cart.getProduct().subscribe(res=>{
       this.totalItem=res.length;
     })
+  }
+  logout() {
+    this.authService.logout();
   }
 }

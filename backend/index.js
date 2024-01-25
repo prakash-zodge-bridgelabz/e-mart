@@ -93,7 +93,7 @@ app.post('/login_credentials',(req,res)=>{
     });
 });
 
-app.listen(3000,()=>{
+app.listen(3001,()=>{
     console.log('server running');
 })
     

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../api/cart.service';
+import { AuthService } from '../../api/auth.service';
 
 @Component({
   selector: 'app-cart',
@@ -9,7 +10,7 @@ import { CartService } from '../../api/cart.service';
 export class CartComponent implements OnInit{
   public products!:any[];
   public grandTotal:number = 0;
-  constructor(private cart:CartService){
+  constructor(private cart:CartService,private authService:AuthService){
 
   }
   ngOnInit(): void {
@@ -26,5 +27,8 @@ export class CartComponent implements OnInit{
   //remove single item form cart
   removeItemFromCart(item:any){
     this.cart.removeCartItem(item);
+  }
+  logout() {
+    this.authService.logout();
   }
 }

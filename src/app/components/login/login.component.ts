@@ -6,6 +6,7 @@ import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoginHeadersService } from '../../api/login-headers.service';
+import { AuthService } from '../../api/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginComponent {
   user: User = new User("", "");
   users: any;
   constructor(private service: DbService, private router: Router, private snackBar: MatSnackBar,
-    private loginHeaders: LoginHeadersService) { }
+    private loginHeaders: LoginHeadersService,private authService:AuthService) { }
   // Set the hidden state of the buttons
   hideButtons() {
     this.loginHeaders.setButtonsHiddenState(true);
@@ -35,22 +36,33 @@ export class LoginComponent {
     console.log('this.users ==>',this.users);
     console.log('this.users.data ==>',this.users.data);
   }
-
-  // public findByUsername() {
-  //   let resp = this.service.getUsername("prakash");
-  //   resp.subscribe((data) => this.users = data);
-  //   console.log("Response :", resp);
-  // }
   public login() {
     const userExists = this.users.data.some((user: { username: any; password: any; }) => user.username === this.username && user.password === this.password);
     if (userExists) {
       console.log('Login successful');
       this.showButtons();
       alert("Login successful....");
+      this.authService.login();
       this.router.navigate(['/home']);
     } else {
       console.error('Login failed: Invalid credentials');
       alert("Invalid credentials....");
     }
   }
+  // public login() {
+  //   const userExists = this.users.data.some((user: { username: any; password: any; }) => user.username === this.username && user.password === this.password);
+    
+  //   this.authService.login().subscribe(
+  //     () => {
+  //       console.log('Login successful');
+  //       this.showButtons();
+  //       alert('Login successful....');
+  //       this.router.navigate(['/home']);
+  //     },
+  //     () => {
+  //       console.error('Login failed: Invalid credentials');
+  //       alert('Invalid credentials....');
+  //     }
+  //   );
+  // }
 }

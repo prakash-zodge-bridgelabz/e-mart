@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../api/products.service';
 import { CartService } from '../../api/cart.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../../api/auth.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -15,13 +16,12 @@ export class ProductsComponent implements OnInit {
   public filteredProducts: any[] = [];
   posts: any[] = [];
   searchText: any;
-  constructor(private api: ProductsService, private cart: CartService,private route: ActivatedRoute) { 
-    this.route.queryParams.subscribe(params => {
-      const selectedCategory = params['category'];
-      // Use the selectedCategory as needed
-    });
-  }
-
+  constructor(private api: ProductsService, private cart: CartService,
+    private route: ActivatedRoute,private authService:AuthService) {   }
+  
+  // logout() {
+  //   this.authService.logout();
+  // }
   ngOnInit(): void {
     this.api.getProduct().subscribe(res => {
       //console.log(res);
@@ -33,9 +33,11 @@ export class ProductsComponent implements OnInit {
         Object.assign(a, { quantity: 1, total: a.price });
       });
     });
-
+    this.route.queryParams.subscribe(params => {
+      this.selectedCategory = params['option'] || 'All Categories';
+    });
+    
   }
-  
   filterProductsByCategory() {
     this.filteredProducts = this.selectedCategory ?
       this.productList.filter((item: any) => item.category === this.selectedCategory) :
