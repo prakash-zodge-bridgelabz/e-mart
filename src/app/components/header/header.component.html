@@ -17,7 +17,7 @@
           <button class="btn btm-light" *ngIf="!areButtonsHidden()" routerLink="login" (click)="logout()">
             <i class="fa fa-sign-out" aria-hidden="true"></i>
           </button>
-        <button class="btn btm-light" *ngIf="!areButtonsHidden()">
+        <button (click)="clickOnEmptyCart()" class="btn btm-light" *ngIf="!areButtonsHidden()">
             <i style="font-size: 30px;" routerLink="/cart" class="fas fa-cart-plus"></i>
             <div style="font-size: 15px;" class="badge bg-dark">{{totalItem}}</div>
         </button>

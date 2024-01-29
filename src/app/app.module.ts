@@ -18,6 +18,7 @@ import { DbService } from './api/db.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { AuthGuardService } from './api/auth-guard.service';
+import { ToastrModule,ToastrService } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { AuthGuardService } from './api/auth-guard.service';
     FormsModule,
     NgxSearchFilterModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     provideClientHydration(),

@@ -3,6 +3,7 @@ import { ProductsService } from '../../api/products.service';
 import { CartService } from '../../api/cart.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../api/auth.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -17,7 +18,8 @@ export class ProductsComponent implements OnInit {
   posts: any[] = [];
   searchText: any;
   constructor(private api: ProductsService, private cart: CartService,
-    private route: ActivatedRoute,private authService:AuthService) {   }
+    private route: ActivatedRoute,private authService:AuthService,
+    private toastr:ToastrService) {   }
   
   // logout() {
   //   this.authService.logout();
@@ -56,6 +58,8 @@ export class ProductsComponent implements OnInit {
   //add to cart
   addToCart(item: any) {
     this.cart.addToCart(item);
+    let itemName = item.title;
+    this.toastr.success('Added to cart',itemName);
     console.log(item);
   }
   public likedProducts: Set<number> = new Set<number>(); // Set to store liked product ids

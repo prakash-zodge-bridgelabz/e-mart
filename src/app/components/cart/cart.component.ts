@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../api/cart.service';
 import { AuthService } from '../../api/auth.service';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -10,7 +10,7 @@ import { AuthService } from '../../api/auth.service';
 export class CartComponent implements OnInit{
   public products!:any[];
   public grandTotal:number = 0;
-  constructor(private cart:CartService,private authService:AuthService){
+  constructor(private cart:CartService,private authService:AuthService,private toastr:ToastrService){
 
   }
   ngOnInit(): void {
@@ -21,6 +21,7 @@ export class CartComponent implements OnInit{
   }
   // empty cart
   emptyCart(){
+    
     this.cart.removeAllItemsFromCart();
   }
 

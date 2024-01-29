@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoginHeadersService } from '../../api/login-headers.service';
 import { AuthService } from '../../api/auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,8 @@ export class LoginComponent {
   user: User = new User("", "");
   users: any;
   constructor(private service: DbService, private router: Router, private snackBar: MatSnackBar,
-    private loginHeaders: LoginHeadersService,private authService:AuthService) { }
+    private loginHeaders: LoginHeadersService,private authService:AuthService,
+    private toaster:ToastrService) { }
   // Set the hidden state of the buttons
   hideButtons() {
     this.loginHeaders.setButtonsHiddenState(true);
@@ -41,12 +43,23 @@ export class LoginComponent {
     if (userExists) {
       console.log('Login successful');
       this.showButtons();
-      alert("Login successful....");
+      // alert("Login successful....");
+      this.toaster.success("Login successful....");
       this.authService.login();
       this.router.navigate(['/home']);
     } else {
       console.error('Login failed: Invalid credentials');
-      alert("Invalid credentials....");
+      if(this.username === ''){
+        this.toaster.warning('Please enter username');
+      }
+      else if(this.password === ''){
+        this.toaster.warning("Please enter password");
+      }
+      else{
+        this.toaster.info("Invalid credentials....");
+      }
+      
+      // alert("Invalid credentials....");
     }
   }
   // public login() {
